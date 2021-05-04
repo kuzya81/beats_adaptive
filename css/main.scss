@@ -1,0 +1,84 @@
+ 
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    font-size: 18px;
+    line-height: 20px;
+}
+body{
+    height: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: normal;
+    color: #292929;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ a{
+     text-decoration: none;
+     color: inherit;
+ }
+ .wrapper{
+     height: 100%;
+ }
+.section{
+    height: 100%;
+    margin: auto;
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 45%;
+    right:2.5rem;
+}
+.page__point{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    position: relative;
+    margin-bottom: 1px;
+    transition: all .3s;
+    &:hover{
+        border: 1px solid gray;
+    }
+    &-active{
+        border-color: #CA1B36;
+        .page__link{
+            background-color: #CA1B36;
+        }
+    }
+}
+.page__link{
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+ @import "hero.scss";
+ @import "reason.scss";
+ @import "feedbacks.scss";
+ @import "order.scss";
+
+ @media (max-width:768px){
+    .page{
+        display: none;
+    }
+ }
